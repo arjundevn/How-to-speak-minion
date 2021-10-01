@@ -11,11 +11,10 @@ function clickEventHandle() {
     fetch(url+ "?" + "text=" +inputText.value)
     .then(response => response.json())
     .then(json => {
-        outputText.innerText = json.contents.translated;
-    })
-    .catch(errorHandler)
+        outputText.innerText = "🍌"+json.contents.translated+"🍌";
+    }).catch(errorHandler)
 }
 
 function errorHandler() {
-    console.log("Error ocurred: ", error);
+    alert("Error ocurred: ", error);
 }
