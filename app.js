@@ -15,6 +15,6 @@ function clickEventHandle() {
     }).catch(errorHandler)
 }
 
-function errorHandler() {
-    alert("Error ocurred: ", error);
+function errorHandler(error) {
+    alert("Server is busy. Please try after sometime..", error);
 }
